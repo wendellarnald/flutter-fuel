@@ -33,6 +33,51 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Logo(),
+          Container(
+            margin: EdgeInsets.all(30),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.9),
+              borderRadius: BorderRadius.circular(25),
+            ),
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 50,
+                ),
+                Text(
+                  "Use Diesel",
+                  style: TextStyle(
+                    color: Theme.of(context).primaryColor,
+                    fontSize: 40,
+                    fontFamily: "Big Shoulders Display",
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  margin: EdgeInsets.all(30),
+                  height: 60,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.9),
+                    borderRadius: BorderRadius.circular(60),
+                  ),
+                  child: FlatButton(
+                    child: Text(
+                      "Recalculate",
+                      style: TextStyle(
+                        color: Theme.of(context).primaryColor,
+                        fontSize: 35,
+                        fontFamily: "Big Shoulders Display",
+                      ),
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+              ],
+            ),
+          ),
           Input(
             label: "Diesel",
             ctrl: _dieselController,
@@ -45,7 +90,7 @@ class HomePage extends StatelessWidget {
             margin: EdgeInsets.all(30),
             height: 60,
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.8),
+              color: Colors.white.withOpacity(0.9),
               borderRadius: BorderRadius.circular(60),
             ),
             child: FlatButton(
