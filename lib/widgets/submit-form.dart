@@ -5,13 +5,13 @@ import 'package:fuel/widgets/input.widget.dart';
 import 'loading-button.widget.dart';
 
 class SubmitForm extends StatelessWidget {
-  var dieselController = new MoneyMaskedTextController();
+  var alcoolController = new MoneyMaskedTextController();
   var gasolineController = new MoneyMaskedTextController();
   var busy;
   Function submitFunc;
 
   SubmitForm({
-    @required this.dieselController,
+    @required this.alcoolController,
     @required this.gasolineController,
     @required this.busy,
     @required this.submitFunc,
@@ -27,8 +27,8 @@ class SubmitForm extends StatelessWidget {
             right: 30,
           ),
           child: Input(
-            label: "Diesel",
-            ctrl: dieselController,
+            label: "Álcool",
+            ctrl: alcoolController,
           ),
         ),
         Padding(
