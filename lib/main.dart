@@ -3,6 +3,7 @@ import 'package:flutter_masked_text/flutter_masked_text.dart';
 import 'package:fuel/widgets/input.widget.dart';
 import 'package:fuel/widgets/loading-button.widget.dart';
 import 'package:fuel/widgets/logo.widget.dart';
+import 'package:fuel/widgets/submit-form.dart';
 import 'package:fuel/widgets/success.widget.dart';
 
 void main() {
@@ -35,20 +36,12 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Logo(),
-          Success(
-            reset: () {},
-            result: "Use X",
+          SubmitForm(
+            dieselController: _dieselController,
+            gasolineController: _gasolineController,
+            busy: false,
+            submitFunc: () {},
           ),
-          Input(
-            label: "Diesel",
-            ctrl: _dieselController,
-          ),
-          Input(
-            label: "Gasoline",
-            ctrl: _gasolineController,
-          ),
-          LoadingButton(
-              busy: true, func: () {}, invert: false, text: "Calculate"),
         ],
       ),
     );
