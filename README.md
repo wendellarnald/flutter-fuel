@@ -1,6 +1,6 @@
 # Flutter Fuel
 
-
+The objective of this project is to calculate the price of fuel and to verify that it is worth using, a simple application to learn the language of flutter.
 
 ## Author
 
